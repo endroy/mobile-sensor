@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from bmw.thefront.com.cn/bmw-x4/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Aug 2014 01:54:51 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>三轴旋转</title>
+    <link href="content/site.css" rel="stylesheet" />
+    <script src="js/gyro.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/panoobj.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        var po;
+        var gy;
+        $(document).ready(function() {
+            po = new panoobj();
+            gy = new pano2vrGyro(po, 'container');
+        });
+    </script>
+</head>
+<body ng-app="scApp" ng-controller="RootCtrl" style="width: 640px">
+    <div id="container" style="width: 640px; height: 960px">
+        <p>yaw: <span id="yaw"></span></p>
+        <p>pitch: <span id="pitch"></span></p>
+        <p>roll: <span id="roll"></span></p>
+</body>
+</html>
